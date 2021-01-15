@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col py-4"><h1 class="m-4 p-auto align-middle text-center">Edição de Paciente</h1></div>
+    </div>
+    <form class="example-form" (ngSubmit) = "onSubmit()">
+        <div class=" row d-flex justify-content-center">
+            <div class="col-3"></div>
+            <div class="col-6 align-self-center">
+            <div class="row d-flex justify-content-center">
+            <mat-form-field class="example-full-width" style="width:50%" >
+                    <mat-label>Nome Completo</mat-label>
+                    <input  matInput placeholder=" " id="nome" name="nome" [(ngModel)] = "paciente.nome">
+            </mat-form-field>
+            </div>
+
+            <div class="row d-flex justify-content-center py-4">
+                <mat-form-field class="example-full-width" style="width:25%">
+                        <mat-label>Data de Nascimento</mat-label>
+                        <input type="date" matInput placeholder="dia/mês/ano" id="nascimento" name="nascimento" [(ngModel)] = "paciente.nascimento">
+                </mat-form-field>
+                <mat-form-field class="example-full-width pl-4" style="width:25%">
+                    <mat-label>Sexo</mat-label>
+                        <select matNativeControl required id="sexo" name="sexo" [(ngModel)] = "paciente.sexo">
+                            <option value="0">Masculino</option>
+                            <option value="1">Feminino</option>
+                        </select>
+            </mat-form-field>
+            </div>
+
+            <div class="row d-flex justify-content-center py-4">
+                <mat-form-field class="example-full-width" style="width:50%">
+                        <mat-label>Motivo da Internação</mat-label>
+                        <input matInput placeholder="Motivo pelo qual o paciente foi internado" name ="motivo" id="motivo" [(ngModel)] = "paciente.motivo">
+                </mat-form-field>
+            </div>
+
+            <div class="row d-flex justify-content-center py-4">
+                <mat-form-field class="example-full-width" style="width:50%">
+                        <mat-label>Hospital</mat-label>
+                        <input matInput placeholder="Nome do hospital onde foi realizada a internação" name="hospital" id="hospital" [(ngModel)] = "paciente.hospital">
+                </mat-form-field>
+            </div>
+            <div class="row d-flex justify-content-center pt-4">
+                <p>Cadastrado em: {{paciente.dataInsercao}}</p>
+            </div>
+            <div class="row d-flex justify-content-center pt-4">
+                <p>Última alteração feita em: {{paciente.ultimaAlteracao}}</p>
+            </div>
+
+            <div class="row d-flex justify-content-center pt-4">
+                <button mat-raised-button color="accent" type="submit">Cadastrar</button>
+            </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        
+    </form>
+    
+</div>

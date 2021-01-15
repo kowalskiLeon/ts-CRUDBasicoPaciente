@@ -1,0 +1,23 @@
+.botao-cancelar{
+    color: white;
+    background-color: #30fd52;
+    transition: 0.3s;
+}
+
+.botao-cancelar:hover{
+    color: white;
+    background-color: #49d684;
+    transition: 0.3s;
+}
+
+.botao-excluir{
+    color: white;
+    background-color: #f65858;
+    transition: 0.3s;
+}
+
+.botao-excluir:hover{
+    color: white;
+    background-color: #d22222;
+    transition: 0.3s;
+}

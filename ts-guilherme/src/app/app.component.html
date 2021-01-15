@@ -1,0 +1,55 @@
+<mat-toolbar class="barra-superior">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3"><span class="titulo-pagina">Consulta de Pacientes</span></div>
+      
+      <div class="col-2" *ngIf="loginName == 'Administrador' ">
+        <a routerLink="pacientes" routerLinkActive = "active" class="links-cima mx-4">Lista de Pacientes</a>
+        <a routerLink="criar-paciente" routerLinkActive = "active" class="links-cima mx-4" >Adicionar Pacientes</a>
+      </div>
+
+
+    </div>
+  </div>
+
+</mat-toolbar>
+
+<div class= "container-fluid py-4" *ngIf="loginName != 'Administrador' ">
+  <form class="example-form" (ngSubmit) = "onSubmit()">
+    <div class=" row d-flex justify-content-center">
+        <div class="col-3"></div>
+          <div class="col-6 align-self-center">
+            <div class="row d-flex justify-content-center">
+              <h1 class="py-4">Insira seus dados para continuar!</h1>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <mat-form-field class="example-full-width" >
+                <mat-label>Login</mat-label>
+                <input  matInput placeholder="admin" id="usuario" name="usuario" [(ngModel)] = "usuario">
+              </mat-form-field>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <mat-form-field class="example-full-width">
+                <mat-label>Senha</mat-label>
+                <input type="password" matInput placeholder="12345" id="senha" name="senha" [(ngModel)] = "senha">
+              </mat-form-field>
+            </div>
+            <div class="row d-flex justify-content-center pt-4">
+              <button mat-raised-button color="accent" type="submit">Entrar</button>
+            </div>
+
+            <div class="row d-flex justify-content-center pt-4">
+              <p>Login: admin, Senha: 12345</p>
+            </div>
+
+          </div>
+          <div class="col-3"></div>
+      </div>
+    </form>    
+  
+</div>
+
+<router-outlet  *ngIf="loginName == 'Administrador' ">
+
+</router-outlet>

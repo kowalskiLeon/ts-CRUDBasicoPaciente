@@ -1,0 +1,15 @@
+<h1>Excluir Paciente</h1>
+
+<h2>Dados:</h2>
+<div *ngIf = "paciente">
+    <p>Nome: {{paciente.nome}}</p>
+    <p>{{paciente.sexo}}</p>
+    <p>Data de Nascimento: {{paciente.nascimento}}</p>
+    <p>Hospital: {{paciente.hospital}}</p>
+    <p>Motivo: {{paciente.motivo}}</p>
+</div>
+
+<p class="py-4">Deseja realmente prosseguir? Essa mudança não é reversível</p>
+
+<button mat-flat-button mat-dialog-close mat-dialog-close ="true" class="botao-excluir mx-2">Prosseguir</button>
+<button mat-flat-button mat-dialog-close mat-dialog-close ="false" class="botao-cancelar mx-2">Cancelar</button>

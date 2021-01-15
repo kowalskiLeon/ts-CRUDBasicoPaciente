@@ -1,0 +1,31 @@
+.botao-editar{
+    color: black;
+    background-color: #FFCC5C;
+    transition: 0.3s;
+}
+
+.botao-editar:hover{
+    color: white;
+    background-color: #ae7700;
+    transition: 0.3s;
+}
+
+.botao-excluir{
+    color: white;
+    background-color: #f65858;
+    transition: 0.3s;
+}
+
+.botao-excluir:hover{
+    color: white;
+    background-color: #d22222;
+    transition: 0.3s;
+}
+
+.masc{
+    color: #5d91ff;
+}
+
+.fem{
+    color: #ff5d5d;
+}
